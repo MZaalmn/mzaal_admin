@@ -1,6 +1,6 @@
 // src/utils/fetcher.ts
 export async function fetcher(path) {
-    const req = await fetch(`http://localhost:8000/api/${path}`);
+    const req = await fetch(`http://localhost:8000/${path}`);
     if (!req.ok) {
         throw new Error("Network response was not ok");
     }
