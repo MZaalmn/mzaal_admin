@@ -54,7 +54,9 @@ const EditOwnerModal = ({ isOpen, onClose, ownerId, onSave }) => {
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white p-8 rounded-lg shadow-lg w-[50%]">
-                <h3 className="text-lg font-bold mb-4">Edit Owner</h3>
+                <h3 className="text-lg font-bold mb-4">
+                    Заал эзэмшигчийн мэдээллийг засах
+                </h3>
                 <form>
                     {/* Display owner image */}
                     <div className="flex items-center gap-10">
@@ -71,7 +73,7 @@ const EditOwnerModal = ({ isOpen, onClose, ownerId, onSave }) => {
                             <label htmlFor="image">Зураг</label>
                             <input
                                 type="text"
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 mt-3 w-full block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 mt-3 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 onChange={handleChange}
                                 value={ownerData.image}
                             />

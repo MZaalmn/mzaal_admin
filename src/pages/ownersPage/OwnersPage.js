@@ -83,7 +83,7 @@ const OwnersPage = () => {
                 if (response.status === 200) {
                     setMessage("User successfully added to owners.");
                     setTimeout(() => closeModal(), 1000);
-                    // window.location.reload();
+                    window.location.reload();
                 } else {
                     setMessage("Unexpected response.");
                 }

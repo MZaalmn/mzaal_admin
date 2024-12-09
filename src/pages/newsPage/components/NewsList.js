@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../../../components/Button";
-import { FaEdit, FaList, FaTrash } from "react-icons/fa";
+import { FaEdit, FaTrash } from "react-icons/fa";
 
 const NewsList = ({ newsItems, onDelete, openEditModal }) => {
     return (
@@ -14,11 +14,14 @@ const NewsList = ({ newsItems, onDelete, openEditModal }) => {
                         <th scope="col" className="py-3 px-6">
                             Зураг
                         </th>
-                        <th scope="col" className="py-3 px-10">
+                        <th scope="col" className="py-3 px-6">
                             Гарчиг
                         </th>
-                        <th scope="col" className="py-3 px-16">
+                        <th scope="col" className="py-3 px-6">
                             Мэдээ
+                        </th>
+                        <th scope="col" className="py-3 px-6">
+                            Нийтлэгч
                         </th>
                         <th scope="col" className="py-3 px-6">
                             Actions
@@ -42,15 +45,22 @@ const NewsList = ({ newsItems, onDelete, openEditModal }) => {
                             </td>
                             <td className="py-4 px-6">
                                 <div>
-                                    <p className="text-gray-900 font-medium">
+                                    <p className="text-gray-900 font-medium line-clamp-2">
                                         {newsItem.title}
                                     </p>
                                 </div>
                             </td>
                             <td className="py-4 px-6">
-                                <p className="text-gray-500 text-sm">
-                                    {newsItem.title}
+                                <p className="text-gray-500 text-sm line-clamp-2">
+                                    {newsItem.description}
                                 </p>
+                            </td>
+                            <td className="py-4 px-6">
+                                <div>
+                                    <p className="text-gray-900 font-medium line-clamp-2">
+                                        {newsItem.author}
+                                    </p>
+                                </div>
                             </td>
                             <td className="py-4 px-6 flex space-x-2">
                                 <Button
@@ -60,15 +70,10 @@ const NewsList = ({ newsItems, onDelete, openEditModal }) => {
                                     Icon={FaEdit}
                                 />
                                 <Button
-                                    onClick={() => onDelete(newsItem.id)}
+                                    onClick={() => onDelete(newsItem._id)}
                                     className="text-white bg-red-500 hover:bg-red-600 font-medium rounded-lg text-sm px-4 py-2"
                                     text={"Устгах"}
                                     Icon={FaTrash}
-                                />
-                                <Button
-                                    className="text-white bg-blue-500 hover:bg-blue-600 font-medium rounded-lg text-sm px-4 py-2"
-                                    text={"Заалууд"}
-                                    Icon={FaList}
                                 />
                             </td>
                         </tr>
