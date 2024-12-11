@@ -40,6 +40,22 @@ const Sidebar = () => {
                         Хэрэглэгчид
                     </Link>
                 </li>
+                <li>
+                    <Link
+                        to="/hallsType"
+                        className="block rounded-lg py-2 px-3 hover:bg-gray-700"
+                    >
+                        Заалны төрлүүд
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="/hallCreate"
+                        className="block rounded-lg py-2 px-3 hover:bg-gray-700"
+                    >
+                        Заал нэмэх
+                    </Link>
+                </li>
             </ul>
         </aside>
     );

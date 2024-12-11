@@ -8,6 +8,8 @@ import NewsPage from "./pages/newsPage/NewsPage";
 import OwnersPage from "./pages/ownersPage/OwnersPage";
 import Footer from "./components/layout/Footer";
 import OwnerHallsPage from "./pages/ownersPage/ownerHalls/OwnerHallsPage";
+import HallsType from "./pages/hallsType/HallsType";
+import HallCreatePage from "./pages/HallOwnersPages/hallCreatePage/hallCreatePage";
 
 const App = () => {
     return (
@@ -22,6 +24,11 @@ const App = () => {
                             <Route path="/news" element={<NewsPage />} />
                             <Route path="/owners" element={<OwnersPage />} />
                             <Route path="/users" element={<UserPage />} />
+                            <Route path="/hallsType" element={<HallsType />} />
+                            <Route
+                                path="/hallCreate"
+                                element={<HallCreatePage />}
+                            />
                             <Route
                                 path="/ownersHalls/:ownerId"
                                 element={<OwnerHallsPage />}
